@@ -3,20 +3,20 @@
 
 
 /**
- * find_listint_loop - finds a loop in listint_t linked list.
+ * int check_cycle(listint_t *list) - finds a loop in listint_t linked list.
  *
- * @head: a pointer to the head.
+ * @list: a pointer to the head.
  *
- * Return: The address of the node where the loop starts, or NULL.
+ * Return: 0 if there is no cycle, 1 if there is a cycle
  */
 
-listint_t *find_listint_loop(listint_t *head)
+int check_cycle(listint_t *list)
 {
 	int i, count = 0;
 	listint_t *ptr, *check;
 
 	if (head == NULL)
-		return (NULL);
+		return (0);
 
 	ptr = head;
 
@@ -29,7 +29,7 @@ listint_t *find_listint_loop(listint_t *head)
 		{
 			if (check == ptr)
 			{
-				return (ptr);
+				return (1);
 			}
 			check = check->next;
 			i++;
@@ -38,5 +38,5 @@ listint_t *find_listint_loop(listint_t *head)
 		count++;
 	}
 
-	return (ptr);
+	return (0);
 }
