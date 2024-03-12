@@ -15,15 +15,15 @@ int check_cycle(listint_t *list)
 	int i, count = 0;
 	listint_t *ptr, *check;
 
-	if (head == NULL)
+	if (list == NULL)
 		return (0);
 
-	ptr = head;
+	ptr = list;
 
 	while (ptr)
 	{
 		i = 0;
-		check = head;
+		check = list;
 
 		while (i < count)
 		{
