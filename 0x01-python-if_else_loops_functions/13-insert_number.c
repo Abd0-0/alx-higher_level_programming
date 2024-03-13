@@ -47,6 +47,5 @@ listint_t *insert_node(listint_t **head, int number)
 
 	if (ptr && !ptr->next)
 		ptr->next = new;
-	*head = new;
 	return (new);
 }	
