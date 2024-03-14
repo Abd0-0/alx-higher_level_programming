@@ -4,9 +4,9 @@ if __name__ == "__main__":
     ac = len(sys.argv) - 1
     av = sys.argv
     if ac == 0:
-        print("0 arguments")
+        print("{} arguments".format(ac))
     elif ac == 1:
-        print("1 argument")
+        print("{} argument".format(ac))
     else:
         print("{} arguments:".format(ac))
     for i in range(1, ac + 1):
